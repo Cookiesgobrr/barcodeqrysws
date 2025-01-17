@@ -11,3 +11,6 @@ The main point of this HC YSWS was to make a small file that could fit into a QR
 So here you go.
 
 There's a single HTML file, which I've converted to data url w b64.
+
+The generator in action:
+![download (1)](https://github.com/user-attachments/assets/324b8100-35f6-41a4-b724-b69c7c7fcf89)
