@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Barcode Generator</title>
+  <h2>Made by TA for HC YSWS - saycheese :D</h2>
+  <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    canvas {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Barcode Generator</h1>
+  <p>Enter text to generate a barcode:</p>
+  <input type="text" id="barcodeInput" placeholder="Enter text">
+  <button onclick="generateBarcode()">Generate</button>
+  <canvas id="barcode"></canvas>
+  <script>
+    function generateBarcode() {
+      const text = document.getElementById('barcodeInput').value;
+      if (text.trim() === "") {
+        alert("Please enter some text to generate a barcode.");
+        return;
+      }
+      JsBarcode("#barcode", text, {
+        format: "CODE128",
+        lineColor: "#000",
+        width: 2,
+        height: 50,
+        displayValue: true
+      });
+    }
+  </script>
+</body>
+</html>
